@@ -1,11 +1,11 @@
 name: Deploy docs
 
-on: 
+on:
   push:
     branches:
       - main
 
-jobs: 
+jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      
+
       - run: npm ci
 
       - run: npm run build
